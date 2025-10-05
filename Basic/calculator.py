@@ -10,19 +10,19 @@ def divide(a, b):
     return a / b
 
 print("Welcome to the Calculator!")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+number1 = float(input("Enter the first number: "))
+number2 = float(input("Enter the second number: "))
 
-operation = input("Select operation (1-4): ")
-if operation == "1":
-    print("Result:", add(num1, num2))
-elif operation == "2":
-    print("Result:", subtract(num1, num2))
-elif operation == "3":
-    print("Result:", multiply(num1, num2))
-elif operation == "4":
+operation = input("Choose an operation (+, -, *, /): ")
+if operation == "+":
+    print("Result:", add(number1, number2))
+elif operation == "-":
+    print("Result:", subtract(number1, number2))
+elif operation == "*":
+    print("Result:", multiply(number1, number2))
+elif operation == "/":
     try:
-        print("Result:", divide(num1, num2))
+        print("Result:", divide(number1, number2))
     except ValueError as e:
         print("Error:", e)
 else:
